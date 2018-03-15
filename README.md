@@ -1,1 +1,1 @@
-# nd-9_diplom
+# nd-9_diplomde
