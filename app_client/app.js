@@ -13,15 +13,6 @@ angular
 				url: "/kitchen",
 				templateUrl: "kitchen/kitchen.view.html"
 			})
-
-
-		// $routeProvider
-	 	// 	.when('/', {
-	 	// 		templateUrl: 'client/client.view.html',
-	 	// 		controller: 'clientCtrl',
-	 	// 		controllerAs: 'vm'
-	 	//   })		
-	// 	.otherwise('/');
 	}]);
 
 function droneCtrl($scope) {
