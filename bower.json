@@ -1,0 +1,21 @@
+{
+  "name": "nd-9_diplom",
+  "description": "В рамках дипломного проект необходимо разработать систему автоматизации ресторана, в котором вместо официантов используются автономные дроны, а заказ размещается через простое веб-приложение.",
+  "main": "bin/www",
+  "authors": [
+    "Ponomarev E.A."
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mrDoctor000/nd-9_diplom",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^1.0.15",
+    "angular": "^1.6.9"
+  }
+}

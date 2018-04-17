@@ -1,0 +1,14 @@
+<div ng-if="uservm.isAutorized">
+    <div class="clientAuth">
+        <div class="clientEmail">{{uservm.clientEmail}}</div>
+        <button class="logOut" ng-click="uservm.logOut">Выйти</button>
+    </div>
+    <div>
+        <div>Баланс: {{uservm.clientBallance}} Галактических кредитов</div>
+        <button ng-click="uservm.addBallance">Пополнить</button>
+    </div>
+
+</div>
+<div ng-if="!uservm.isAutorized">
+    <login></login>
+</div>

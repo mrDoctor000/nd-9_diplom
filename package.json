@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "start": "node ./bin/www",
-    "mongo": "md data & \"C:/Program Files/MongoDB/Server/3.4/bin/mongod.exe\" --dbpath data"
+    "mongo": "md data & \"D:/Program Files/MongoDB/Server/3.6/bin/mongod.exe\" --dbpath data"
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
     "debug": "^3.1.0",
     "express": "^4.16.2",
     "jquery": "^3.3.1",
-    "materialize-css": "^0.100.2",
+    "materialize-css": "^1.0.0-beta",
     "mongoose": "^5.0.7",
     "path": "^0.12.7"
   }
