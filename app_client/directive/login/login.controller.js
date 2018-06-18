@@ -1,14 +1,27 @@
 angular
     .module('DroneCafeApp')
-    .controller('userInfoCtrl', userInfoCtrl);
+    .controller('loginCtrl', function (clientFactory, userService) {
+        this.status;
+        this.isLogIn = userService.isLogin();
 
-function userInfoCtrl() {
-    this.clientEmail = 'egor@ponomarev.pp.ru'
-    this.clientBalans = 100;
-    this.logout = function () {
+        this.logIn = function (user) {
+            clientFactory.getUser(user).then(function (responce) { //OK
+                this.status = 'log in';
+                userService.setUser(responce.data);
+                $('.modal .login').modal('close');
+            }, function (responce) { //not OK
+                if (responce.data.message === 'Пользователь не найден') {
+                    const newUser = {
+                        name: user.name,
+                        email: user.email
+                    }
+                    clientFactory.createUser(newUser).then(function (responce) { // create user if we didn't find
+                        this.status = 'user created'
+                        userService.setUser(responce.data);
+                        $('.modal .login').modal('close');
+                    })
+                }
+            })
+        }
 
-    }
-    this.isAutorized = function () {
-
-    }
-}
+    });

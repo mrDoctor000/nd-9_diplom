@@ -20,20 +20,22 @@
   "homepage": "https://github.com/mrDoctor000/nd-9_diplom#readme",
   "devDependencies": {},
   "dependencies": {
-    "angular": "^1.6.9",
+    "angular": "^1.7.0",
     "angular-animate": "^1.6.9",
     "angular-aria": "^1.6.9",
     "angular-material": "^1.1.7",
     "angular-messages": "^1.6.9",
-    "angular-resource": "^1.6.9",
+    "angular-resource": "^1.7.0",
     "angular-route": "^1.6.9",
     "body-parser": "^1.18.2",
     "debug": "^3.1.0",
+    "eslint": "^4.19.1",
     "express": "^4.16.2",
     "jquery": "^3.3.1",
     "materialize-css": "^1.0.0-beta",
     "mongoose": "^5.0.7",
     "morgan": "^1.9.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "socket.io": "^2.1.1"
   }
 }

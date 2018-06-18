@@ -1,8 +1,13 @@
-angular.module('DroneCafeApp') 
-.controller('clientCtrl', clientCtrl);
+angular.module('DroneCafeApp')
+    .controller('clientCtrl', function (userService) {   
+        let socket = io();
 
-clientCtrl.$inject = ['MenuService']
-function clientCtrl(MenuService) {
-    this.menu = MenuService;
-    this.production;
-}
+        this.isLogIn = userService.isLogIn();
+
+        this.openModal = function() {
+            $('.modal .login').modal();
+            $('.modal .login').modal('open');
+        }
+
+
+    });

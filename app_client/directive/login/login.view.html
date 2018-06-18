@@ -1,19 +1,28 @@
-<form>
-    <div class="container">
-        <label for="uname">
-            <b>Имя</b>
-        </label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+<div class="modal-content">
+    <i class="material-icons right modal-close" title="Close">закрыть</i>
+    <h4>Вход</h4>
 
-        <label for="email">
-            <b>Email</b>
-        </label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+    <form name="loginForm" class="col s12" novalidate>
 
-        <button type="submit">Войти</button>
-    </div>
+        <div class="row">
+            <div class="input-field s12">
+                <label for="user_name">Имя</label>
+                <input type="text" placeholder="Enter Username" class="validate" name="newUser.name" required>
+            </div>
+        </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Отмена</button>
-    </div>
-</form>
+        <div class="row">
+            <div class="input-field s12">
+                <label for="email">Email</label>
+                <input type="text" placeholder="Enter Email" name="newUser.email" required>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="input-field s12">
+                <button type="submit" ng-click="logIn(newUser)">Войти</button>
+            </div>
+        </div>
+    </form>
+</div>

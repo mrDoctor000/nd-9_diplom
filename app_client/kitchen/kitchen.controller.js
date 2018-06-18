@@ -1,6 +1,4 @@
 angular.module('DroneCafeApp')
-    .controller('kitchenCtrl', kitchenCtrl);
+    .controller('kitchenCtrl', function () {
 
-function kitchenCtrl() {
-
-}
+    });

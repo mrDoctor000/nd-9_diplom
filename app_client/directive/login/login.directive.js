@@ -6,6 +6,6 @@ function login() {
     return {
         restrict: 'EA',
         templateUrl: '/directive/login/login.view.html',
-        controller: 'navigationCtrl as navvm'
+        controller: 'loginCtrl as navvm'
     };
 }

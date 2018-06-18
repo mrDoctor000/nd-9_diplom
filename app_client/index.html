@@ -18,10 +18,21 @@
 
 
   <script src="/app.js"></script>
-  <script src="/directive/login/login.controller.js"></script>
+
   <script src="/directive/login/login.directive.js"></script>
-  <script src="/directive/userInfo/userInfo.controller.js"></script>
+  <script src="/directive/login/login.controller.js"></script>
   <script src="/directive/userInfo/userInfo.directive.js"></script>
+  <script src="/directive/userInfo/userInfo.controller.js"></script>
+  <script src="/directive/menu/menu.directive.js"></script>
+  <script src="/directive/menu/menu.controller.js"></script>
+  <script src="/directive/readyDish/readyDish.directive.js"></script>
+  <script src="/directive/readyDish/readyDish.controller.js"></script>
+  <script src="/directive/droneFooter/droneFooter.directive.js"></script>
+  <script src="/directive/droneFooter/droneFooter.controller.js"></script>
+  <script src="/directive/navigation/navigation.directive.js"></script>
+  <script src="/directive/navigation/navigation.controller.js"></script>
+
+  <script src="/service/menu.service.js"></script>
 
   <script src="/client/client.controller.js"></script>
 
@@ -30,26 +41,30 @@
 
 <body ng-app="DroneCafeApp">
   <div ng-controller="droneCtrl">
-    <nav class="light-blue lighten-1" role="navigation">
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Drone Cafe</a>
-        <user-info></user-info>
-      </div>
-    </nav>
+    <navigation>
+    </navigation>
 
     <div class="container">
-      <ng-view></ng-view>
-    </div>
-
-    <footer class="page-footer orange">
-      <div class="footer-copyright">
-        <div class="container">
-          Made by
-          <a class="orange-text text-lighten-3" href="https://github.com/mrDoctor000">Ponomarev E.A.</a>
-        </div>
+      <ng-view>
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+      </ng-view>
       </div>
-    </footer>
-  </div>
+
+      <drone-footer></drone-footer>
+
+
+    </div>
 </body>
 
 </html>
